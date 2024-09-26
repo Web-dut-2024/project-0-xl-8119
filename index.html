@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Search</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        .search-container {
+            text-align: center;
+        }
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            border-radius: 24px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+        input[type="submit"], .lucky {
+            padding: 10px 20px;
+            border-radius: 24px;
+            background-color: #f8f9fa;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover, .lucky:hover {
+            background-color: #e0e0e0;
+        }
+        .links {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="search-container">
+        <form action="https://www.google.com/search" method="GET">
+            <input type="text" name="q" placeholder="Search Google">
+            <br>
+            <input type="submit" value="Google Search">
+        </form>
+        <button class="lucky" onclick="window.location.href='https://www.google.com/search?btnI=I&q=' + encodeURIComponent(document.querySelector('input[name=q]').value);">
+            I'm Feeling Lucky
+        </button>
+    </div>
+    <div class="links">
+        <a href="images.html">Image Search</a> | 
+        <a href="advanced.html">Advanced Search</a>
+    </div>
+
+</body>
+</html>
